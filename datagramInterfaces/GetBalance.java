@@ -24,7 +24,7 @@ public class GetBalance extends WalletRequest {
             respond = new NodeRespond(UNKNOWN_ADDRESS);
         else {
             int balance = Database.getBalance(con, account.getAddress());
-            account.setBalance(balance);
+        
             respond = new GetBalanceRespond(OK, balance);
         }
         return respond;
